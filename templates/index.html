@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body>
+
+<form id = "register" method = "post" action ="">
+
+{% csrf_token%}
+{% for field in form.visible_fields%}
+{{ field.errors}}
+{{ field }}
+{%endfor%}
+<input type="submit" name="submit" value="Register"/>
+</form>
+</body>
+</html>

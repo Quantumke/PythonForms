@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+from rango import views
 urlpatterns = [
-    url(r'^$', views.forms, name='forms')
+    url(r'^$', views.reg, name='forms'),
     url(r'^admin/', include(admin.site.urls)),
 ]
